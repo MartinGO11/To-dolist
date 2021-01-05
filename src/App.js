@@ -20,6 +20,17 @@ function App() {
         <h1>tareas</h1>
         <FormularioTareas agregarTarea={agregarTarea} />
         <ListaTarea tareas={tareas} eliminarTarea={eliminarTarea}/>
+              {(() => {
+        if (tareas >= 0) {
+          return (
+            <div>No tasks, add a task</div>
+          )
+        } else {
+          return (
+            <div>{tareas.length} tareas pendientes</div>
+          )
+        }}
+      )()}
       </header>
     </div>
   );
