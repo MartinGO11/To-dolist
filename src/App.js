@@ -17,17 +17,17 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>tareas</h1>
+        <h1>TASKLIST</h1>
         <FormularioTareas agregarTarea={agregarTarea} />
         <ListaTarea tareas={tareas} eliminarTarea={eliminarTarea}/>
               {(() => {
         if (tareas >= 0) {
           return (
-            <div>No tasks, add a task</div>
+            <div>No tasks, add task</div>
           )
         } else {
           return (
-            <div>{tareas.length} tareas pendientes</div>
+            <div>{tareas.length} Pending Tasks</div>
           )
         }}
       )()}
